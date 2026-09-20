@@ -1,0 +1,19 @@
+# 构建产物
+target/
+*.class
+
+# 日志
+*.log
+logs/
+
+# IDE 本地配置（保留 .idea 下的共享配置，忽略个人本地文件）
+.idea/workspace.xml
+.idea/shelf/
+.idea/queries/
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.local.xml
+
+# 操作系统
+.DS_Store
+Thumbs.db
