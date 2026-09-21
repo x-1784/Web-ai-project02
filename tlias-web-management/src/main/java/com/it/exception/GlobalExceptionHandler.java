@@ -30,6 +30,16 @@ public class GlobalExceptionHandler {
         String[] arr = errMSG.split(" ");
         return Result.error(arr[2]+"已存在");
     }
+
+    /**
+     * 处理：班级下有学生，不能删除
+     */
+    @ExceptionHandler
+    public Result handleClazzHasStudentException(ClazzHasStudentException e){
+        log.error("业务异常：{}", e.getMessage());
+        return Result.error(e.getMessage());
+    }
+
 }
 
 

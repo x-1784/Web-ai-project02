@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ClaudeCodeEditorTabs">
-    <option name="activeSessionId" value="2d90e8e8-c60a-421c-bca5-91a9f77f9575" />
+    <option name="activeSessionId" value="5dfca9bc-6f0c-46b6-8c00-19882d95c436" />
     <option name="openSessionIds">
       <list>
-        <option value="2d90e8e8-c60a-421c-bca5-91a9f77f9575" />
+        <option value="5dfca9bc-6f0c-46b6-8c00-19882d95c436" />
       </list>
     </option>
     <option name="sessionPaths">
       <map>
-        <entry key="2d90e8e8-c60a-421c-bca5-91a9f77f9575" value="/sessions/fbc84d21-9bd0-4e20-8320-8be9515aed13" />
+        <entry key="5dfca9bc-6f0c-46b6-8c00-19882d95c436" value="/sessions/c4a28c7a-760a-4888-a37d-41067d69ec36" />
       </map>
     </option>
     <option name="sessionTitles">
       <map>
-        <entry key="2d90e8e8-c60a-421c-bca5-91a9f77f9575" value="The user selected the lines 7 to 19 from tlias-web" />
+        <entry key="5dfca9bc-6f0c-46b6-8c00-19882d95c436" value="帮我写一个功能接口删除班级信息接口，请求路径/clazzs/{id}，注意：在页面原型中，要求如果该" />
       </map>
     </option>
   </component>
