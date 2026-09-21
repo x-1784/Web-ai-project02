@@ -27,4 +27,9 @@ public interface EmpService {
      * 修改员工
      */
     void update(Emp emp);
+
+    /**
+     * 询全部员工，班级管理查询所有班主任
+     */
+    List<Emp> list();
 }

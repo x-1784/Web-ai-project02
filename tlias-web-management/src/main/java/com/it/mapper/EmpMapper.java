@@ -5,6 +5,7 @@ import com.it.pojo.EmpQueryParam;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
+import org.apache.ibatis.annotations.Select;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -60,6 +61,12 @@ public interface EmpMapper {
      * 统计员工性别人数
      */
     List<Map<String, Object>> countEmpGenderData();
+
+    /**
+     * 询全部员工，班级管理查询所有班主任
+     */
+    @Select("select * from emp")
+    List<Emp> AllList();
 }
 
 

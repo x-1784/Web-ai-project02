@@ -93,6 +93,17 @@ public class EmpController {
         return Result.success();
     }
 
+    /**
+     * 查询全部员工，班级管理查询所有班主任
+     */
+    @GetMapping("/list")
+    public Result list(){
+        log.info("查询所有员工");
+        List<Emp> empList =  empService.list();
+        return Result.success(empList);
+    }
+
+
 }
 
 

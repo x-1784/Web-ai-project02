@@ -4,9 +4,7 @@ import com.it.pojo.*;
 import com.it.service.ClazzService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -26,5 +24,46 @@ public class ClazzController {
         return Result.success(pageResult);
     }
 
+    /**
+     * 新增班级
+     */
+    @PostMapping
+    public Result save(@RequestBody Clazz clazz){
+        log.info("新增员工：{}",clazz);
+        clazzService.save(clazz);
+        return Result.success();
+    }
+
+    /**
+     * 班级管理，根据id查询班级，即查询回显
+     */
+    @GetMapping("/{id}")
+    public Result getById(@PathVariable Integer id){
+        log.info("根据id查询班级：{}",id);
+        Clazz clazz = clazzService.getById(id);
+        return Result.success(clazz);
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
