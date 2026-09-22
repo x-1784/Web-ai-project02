@@ -64,7 +64,7 @@ public class EmpController {
     /**
      * 删除员工--集合接收请求参数  RequestParam不能省略
      */
-    @DeleteMapping
+    @DeleteMapping   //前端是查询参数，用注解@RequestParam， 路径参数用@PathVariable
     public Result delete(@RequestParam List<Integer> ids){
         log.info("删除员工：{}", ids);
         empService.delete(ids);

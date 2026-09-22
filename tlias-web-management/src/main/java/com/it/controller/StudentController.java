@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/students")
@@ -37,4 +39,54 @@ public class StudentController {
         return Result.success();
     }
 
+    /**
+     * 根据id查询学生，学生管理
+     */
+    @GetMapping("/{id}")
+    public Result getinfo(@PathVariable Integer id){
+        log.info("根据id查询学生：{}",id);
+        Student student= studentService.getinfo(id);
+        return Result.success(student);
+    }
+
+    /**
+     * 修改学生信息，学生管理
+     */
+    @PutMapping
+    public Result update(@RequestBody Student student){
+        log.info("修改学生信息：{}",student);
+        studentService.update(student);
+        return Result.success();
+    }
+
+    /**
+     * 批量删除学生，学生管理
+     */
+    @DeleteMapping("/{ids}")  //接口文档说前端是路径参数，所以用注解@PathVariable,查询参数才用@requestparam
+    public Result delete(@PathVariable List<Integer> ids){
+        log.info("删除学生的id：{}",ids);
+        studentService.delete(ids);
+        return Result.success();
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

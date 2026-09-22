@@ -11,13 +11,13 @@
     <option name="sessionPaths">
       <map>
         <entry key="5dfca9bc-6f0c-46b6-8c00-19882d95c436" value="/sessions/c4a28c7a-760a-4888-a37d-41067d69ec36" />
-        <entry key="c350e99f-2f5b-4fe2-9557-2ecf0448edcd" value="/sessions/new" />
+        <entry key="c350e99f-2f5b-4fe2-9557-2ecf0448edcd" value="/sessions/eec82ac6-461a-40fb-814f-12fbb5a74df4" />
       </map>
     </option>
     <option name="sessionTitles">
       <map>
         <entry key="5dfca9bc-6f0c-46b6-8c00-19882d95c436" value="帮我写一个功能接口删除班级信息接口，请求路径/clazzs/{id}，注意：在页面原型中，要求如果该" />
-        <entry key="c350e99f-2f5b-4fe2-9557-2ecf0448edcd" value="Claude Code" />
+        <entry key="c350e99f-2f5b-4fe2-9557-2ecf0448edcd" value="识别我复制的图片，然后帮我哦完成在我选中的这部分代码" />
       </map>
     </option>
   </component>
