@@ -69,6 +69,16 @@ public class StudentController {
         return Result.success();
     }
 
+    /**
+     * 学生违纪处理
+     */
+    @PutMapping("/violation/{id}/{score}")
+    public Result updateViolation(@PathVariable Integer id,@PathVariable Integer score){
+        log.info("添加违纪：{} {}",id,score);
+        studentService.updateViolation(id,score);
+        return Result.success();
+    }
+
 }
 
 

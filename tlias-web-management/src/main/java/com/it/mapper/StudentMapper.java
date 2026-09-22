@@ -4,8 +4,10 @@ import com.it.pojo.Student;
 import com.it.pojo.StudentQueryParam;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Update;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface StudentMapper {
@@ -37,4 +39,19 @@ public interface StudentMapper {
      * 批量删除学生，学生管理
      */
     void deleteByIds(List<Integer> ids);
+
+    /**
+     * 学生违纪处理
+     */
+    @Update("update student set violation_count =violation_count+1," +
+            "violation_score=violation_score+#{score} " +
+            "where id =#{id}")
+    void updateViolation(Integer id, Integer score);
+
+
+    /**
+     * 统计学生学历人数，饼状图
+     */
+    List<Map<String,Object>> countStudentDegreeData();
+
 }

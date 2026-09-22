@@ -34,4 +34,9 @@ public interface StudentService {
      * 批量删除学生，学生管理
      */
     void delete(List<Integer> ids);
+
+    /**
+     * 学生违纪处理
+     */
+    void updateViolation(Integer id,Integer score);
 }

@@ -9,6 +9,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 public interface ClazzMapper {
@@ -56,4 +57,9 @@ public interface ClazzMapper {
      */
     @Select("select * from clazz")
     List<Clazz> clazzList();
+
+    /**
+     * 统计班级人数，柱状图
+     */
+    List<Map<String, Object>> countClazzData();
 }

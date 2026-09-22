@@ -1,10 +1,12 @@
 package com.it.controller;
 
 
+import com.it.pojo.ClazzOption;
 import com.it.pojo.JobOption;
 import com.it.pojo.Result;
 import com.it.service.ReportService;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.mapper.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,6 +42,26 @@ public class ReportController {
         log.info("统计员工性别人数");
         List<Map<String,Object>> genderList = reportService.getEmpGenderData();
         return Result.success(genderList);
+    }
+
+    /**
+     * 统计班级人数，柱状图
+     */
+    @GetMapping("/studentCountData")
+    public Result countClazzData(){
+        log.info("统计班级学生人数");
+        ClazzOption clazzOption = reportService.getClazzCount();
+        return Result.success(clazzOption);
+    }
+
+    /**
+     * 统计学生学历人数，饼状图
+     */
+    @GetMapping("/studentDegreeData")
+    public Result countStudentDegreeData(){
+        log.info("统计学生学历信息人数");
+        List<Map<String,Object>> list =reportService.countStudentDegreeData();
+        return Result.success(list);
     }
 
 }

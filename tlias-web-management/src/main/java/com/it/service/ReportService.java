@@ -1,5 +1,6 @@
 package com.it.service;
 
+import com.it.pojo.ClazzOption;
 import com.it.pojo.JobOption;
 
 import java.util.List;
@@ -16,4 +17,14 @@ public interface ReportService {
      * 统计员工性别人数
      */
     List<Map<String, Object>> getEmpGenderData();
+
+    /**
+     * 统计班级人数，柱状图
+     */
+    ClazzOption getClazzCount();
+
+    /**
+     * 统计学生学历人数，饼状图
+     */
+    List<Map<String, Object>> countStudentDegreeData();
 }

@@ -51,4 +51,9 @@ public class StudentServiceImpl implements StudentService {
     public void delete(List<Integer> ids) {
         studentMapper.deleteByIds(ids);
     }
+
+    @Override
+    public void updateViolation(Integer id,Integer score) {
+        studentMapper.updateViolation(id,score);
+    }
 }
