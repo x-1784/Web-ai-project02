@@ -40,6 +40,15 @@ public class GlobalExceptionHandler {
         return Result.error(e.getMessage());
     }
 
+    /**
+     * 处理：部门下有员工，不能删除
+     */
+    @ExceptionHandler
+    public Result handleDeptHasEmpException (DeptHasEmpException e){
+        log.info("业务异常：{}",e.getMessage());
+        return Result.error(e.getMessage());
+    }
+
 }
 
 

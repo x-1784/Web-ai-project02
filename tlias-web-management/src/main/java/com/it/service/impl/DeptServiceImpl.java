@@ -1,5 +1,6 @@
 package com.it.service.impl;
 
+import com.it.exception.DeptHasEmpException;
 import com.it.mapper.DeptMapper;
 import com.it.pojo.Dept;
 import com.it.service.DeptService;
@@ -20,8 +21,15 @@ public class DeptServiceImpl implements DeptService {
         return deptMapper.findAll();
     }
 
+    /**
+     * 根据id删除部门
+     */
     @Override
     public void deleteById(Integer id) {
+        Integer count =deptMapper.countemp(id);
+        if(count>0){
+            throw new DeptHasEmpException("对不起，当前部门下有员工，不能直接删除！");
+        }
         deptMapper.deleteById(id);
     }
 
