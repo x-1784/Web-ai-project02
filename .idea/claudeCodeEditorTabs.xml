@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ClaudeCodeEditorTabs">
-    <option name="activeSessionId" value="5dfca9bc-6f0c-46b6-8c00-19882d95c436" />
+    <option name="activeSessionId" value="113595da-6aab-464b-b234-61e2c53031e2" />
     <option name="openSessionIds">
       <list>
         <option value="5dfca9bc-6f0c-46b6-8c00-19882d95c436" />
+        <option value="113595da-6aab-464b-b234-61e2c53031e2" />
       </list>
     </option>
     <option name="sessionPaths">
       <map>
+        <entry key="113595da-6aab-464b-b234-61e2c53031e2" value="/sessions/fb25e5ce-25c3-43de-8f26-d1c9c22e088e" />
         <entry key="5dfca9bc-6f0c-46b6-8c00-19882d95c436" value="/sessions/c4a28c7a-760a-4888-a37d-41067d69ec36" />
       </map>
     </option>
     <option name="sessionTitles">
       <map>
+        <entry key="113595da-6aab-464b-b234-61e2c53031e2" value="你检查一下我的登录功能接口写的有没有问题" />
         <entry key="5dfca9bc-6f0c-46b6-8c00-19882d95c436" value="帮我写一个功能接口删除班级信息接口，请求路径/clazzs/{id}，注意：在页面原型中，要求如果该" />
       </map>
     </option>

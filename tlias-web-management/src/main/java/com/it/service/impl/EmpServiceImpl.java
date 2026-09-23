@@ -7,6 +7,8 @@ import com.it.mapper.EmpMapper;
 import com.it.pojo.*;
 import com.it.service.EmpLogService;
 import com.it.service.EmpService;
+import com.it.utils.JwtUtils;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,8 +17,11 @@ import org.springframework.util.CollectionUtils;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
+@Slf4j
 @Service
 public class EmpServiceImpl implements EmpService {
     @Autowired
@@ -126,6 +131,23 @@ public class EmpServiceImpl implements EmpService {
     @Override
     public List<Emp> list() {
         return empMapper.AllList();
+    }
+
+    @Override
+    public LoginInfo login(Emp emp) {
+        Emp e= empMapper.getUsernameAndPassword(emp);
+        if(e !=null){
+            log.info("登录成功，员工信息：{}",e);
+            //生成JWT令牌
+            Map<String, Object> claims = new HashMap<>();
+            claims.put("id",e.getId());
+            claims.put("username",e.getUsername());
+            String jwt = JwtUtils.generateToken(claims);
+
+            LoginInfo loginInfo =new LoginInfo(e.getId(),e.getUsername(),e.getName(),jwt);
+            return loginInfo;
+        }
+        return null;
     }
 }
 
