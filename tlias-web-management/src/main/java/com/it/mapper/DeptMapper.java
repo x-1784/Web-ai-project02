@@ -14,7 +14,7 @@ public interface DeptMapper {
      * 部门管理，根据id删除部门
      */
     //查询该部门下面是否有员工，有员工不能删除
-    @Select("select count(*) from emp where id =#{id}")
+    @Select("select count(*) from emp where dept_id =#{id}")
     Integer countemp(Integer id);
     //根据id删除部门
     @Delete("delete from dept where id =#{id}")
